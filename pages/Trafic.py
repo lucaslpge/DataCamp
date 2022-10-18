@@ -23,7 +23,9 @@ st.header("Take a look at the Trafic")
 st.subheader("Just say us what day and what time you want to check the trafic :")
 day_to_filter = st.slider('Day', 2, 8, 2)
 hour_to_filter = st.slider('Hour', 0, 23, 15)
-minute_to_filter = st.select_slider('Minute',
-                             options=[0, 15, 30, 45])
-filtered_data = df.loc[(df.hour == hour_to_filter) & (df.day == day_to_filter) & (df.minute == minute_to_filter)]
+start_minute, end_minute = st.select_slider(
+    'Minute',
+    options=[0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55],
+    value=(15, 30))
+filtered_data = df.loc[(df.hour == hour_to_filter) & (df.day == day_to_filter) & (df.minute > start_minute) & (df.minute < end_minute)]
 st.map(filtered_data)
