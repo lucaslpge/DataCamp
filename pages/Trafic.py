@@ -18,10 +18,12 @@ def page3():
 
 df = pd.read_csv("clean_taxi.csv")
 
+
 st.header("Take a look at the Trafic")
 st.subheader("Just say us what day and what time you want to check the trafic :")
 day_to_filter = st.slider('Day', 2, 8, 2)
 hour_to_filter = st.slider('Hour', 0, 23, 15)
-minute_to_filter = st.slider('Minute', 0, 59, 30)
+minute_to_filter = st.select_slider('Minute',
+                             options=[0, 15, 30, 45])
 filtered_data = df.loc[(df.hour == hour_to_filter) & (df.day == day_to_filter) & (df.minute == minute_to_filter)]
 st.map(filtered_data)
