@@ -31,3 +31,5 @@ start_minute, end_minute = st.select_slider(
 st.write('You are looking at the trafic at the ', day_to_filter, '/02/2008 between', hour_to_filter, ':', start_minute, 'and', hour_to_filter, ':', end_minute)
 filtered_data = df.loc[(df.hour == hour_to_filter) & (df.day == day_to_filter) & (df.minute >= start_minute) & (df.minute <= end_minute)]
 st.map(filtered_data)
+
+st.write('anto')
