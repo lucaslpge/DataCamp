@@ -25,7 +25,7 @@ day_to_filter = st.slider('Day', 2, 8, 2)
 hour_to_filter = st.slider('Hour', 0, 23, 15)
 start_minute, end_minute = st.select_slider(
     'Minute',
-    options=[0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55],
+    options=[0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 59],
     value=(15, 30))
 filtered_data = df.loc[(df.hour == hour_to_filter) & (df.day == day_to_filter) & (df.minute > start_minute) & (df.minute < end_minute)]
 st.map(filtered_data)
