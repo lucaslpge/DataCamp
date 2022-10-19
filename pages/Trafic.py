@@ -3,7 +3,6 @@ import pandas as pd
 
 st.set_page_config(layout="wide")
 
-
 st.markdown("#Trafic")
 st.sidebar.markdown("Trafic")
 
