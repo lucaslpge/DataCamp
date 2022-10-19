@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+import matplotlib.pyplot as plt
+
 
 st.set_page_config(layout="wide")
 
@@ -57,8 +59,7 @@ def street(df2):
     with right_col_street :
         def count_rows(rows):
             return len(rows)
-
-        by_taxi = df2.groupby('Street', ).apply(count_rows)
+        by_taxi = df2.groupby('Street').apply(count_rows)
         by_taxi
 
 
