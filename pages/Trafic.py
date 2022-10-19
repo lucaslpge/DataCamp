@@ -3,6 +3,9 @@ import pandas as pd
 
 st.set_page_config(layout="wide")
 
+
+# ------------------------------------------------ PAGES ------------------------------------------------ #
+
 st.markdown("#Trafic")
 st.sidebar.markdown("Trafic")
 
@@ -18,10 +21,16 @@ def page3():
     st.markdown("#Route Planning")
     st.sidebar.markdown("#Route Planning")
 
+
+# ------------------------------------------------ LOADING CSV ------------------------------------------------ #
+
+
 st.header('Welcome to the Trafic page !')
 df = pd.read_csv('clean_taxi.csv')
 df2 = pd.read_csv('data_china.csv')
 
+
+# ------------------------------------------------ FUNCTIONS ------------------------------------------------ #
 
 
 def map(df):
@@ -51,6 +60,10 @@ def street(df2):
 
         by_taxi = df2.groupby('Street', ).apply(count_rows)
         by_taxi
+
+
+# ------------------------------------------------ MAIN FUNCTION ------------------------------------------------ #
+
 
 def main(df, df2):
     map(df)
