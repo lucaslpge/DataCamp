@@ -1,5 +1,8 @@
 import streamlit as st
 import pandas as pd
+import matplotlib.pyplot as plt
+import plotly.express as px
+import numpy as np
 
 st.set_page_config(layout="wide")
 
@@ -18,11 +21,14 @@ def page3():
     st.markdown("#Route Planning")
     st.sidebar.markdown("#Route Planning")
 
-st.header('Welcome to the Traffic page !')
+st.header('Welcome to the Trafic page !')
 df = pd.read_csv('clean_taxi.csv')
+df2 = pd.read_csv('data_china.csv')
+
+
 
 def map(df):
-    st.header("Take a look at the Trafic")
+    st.header("Take a look at the trafic")
     left_col, right_col = st.columns(2)
     with left_col:
         st.subheader("Just say us what day and what time you want to check the trafic :")
@@ -37,7 +43,16 @@ def map(df):
         filtered_data = df.loc[(df.hour == hour_to_filter) & (df.day == day_to_filter) & (df.minute >= start_minute) & (df.minute <= end_minute)]
         st.map(filtered_data)
 
-def main(df):
-    map(df)
+def street(df2):
+    st.header("Take a look at the streets of highest congestion rate :")
+    def count_rows(rows):
+        return len(rows)
+    by_date = df2.groupby('Street').apply(count_rows)
+    by_date
 
-main(df)
+
+def main(df, df2):
+    map(df)
+    street(df2)
+
+main(df, df2)
