@@ -42,11 +42,15 @@ def map(df):
 
 def street(df2):
     st.header("Take a look at the streets of highest congestion rate :")
-    def count_rows(rows):
-        return len(rows)
-    by_date = df2.groupby('Street').apply(count_rows)
-    by_date
+    left_col_street, right_col_street = st.columns(2)
+    with left_col_street :
+        st.subheader("Here you can see the streets (left column) with the number of taxis present for each street (right column) and sort them in ascending or descending order.")
+    with right_col_street :
+        def count_rows(rows):
+            return len(rows)
 
+        by_taxi = df2.groupby('Street', ).apply(count_rows)
+        by_taxi
 
 def main(df, df2):
     map(df)
