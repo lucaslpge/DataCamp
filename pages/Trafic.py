@@ -51,5 +51,3 @@ def street(df2):
 def main(df, df2):
     map(df)
     street(df2)
-
-main(df, df2)
