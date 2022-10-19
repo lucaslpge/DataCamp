@@ -1,12 +1,11 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
-
 
 st.set_page_config(layout="wide")
 
 
 # ------------------------------------------------ PAGES ------------------------------------------------ #
+
 
 st.markdown("#Trafic")
 st.sidebar.markdown("Trafic")
@@ -70,4 +69,4 @@ def main(df, df2):
     map(df)
     street(df2)
 
-main(df,df2)
+main(df, df2)
