@@ -1,5 +1,7 @@
 pandas
 matplotlib
+plotly
 pydeck
 streamlit
 flexidate
+bokeh
