@@ -3,6 +3,7 @@ import pandas as pd
 
 st.set_page_config(layout="wide")
 
+
 st.markdown("#Trafic")
 st.sidebar.markdown("Trafic")
 
@@ -18,6 +19,8 @@ def page3():
     st.markdown("#Route Planning")
     st.sidebar.markdown("#Route Planning")
 
+st.header('Welcome to the Traffic page !')
+df = pd.read_csv('clean_taxi.csv')
 
 def map(df):
     st.header("Take a look at the Trafic")
@@ -38,11 +41,4 @@ def map(df):
 def main(df):
     map(df)
 
-
-st.header('Welcome to the Traffic page !')
-st.subheader('Please import a csv :')
-df = st.file_uploader("Choose a file")
-if df is not None:
-    df = pd.read_csv(df)
-    st.write(df)
-    main(df)
+main(df)

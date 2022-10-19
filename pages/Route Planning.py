@@ -1,9 +1,11 @@
 import streamlit as st
+import pandas as pd
 
 st.set_page_config(layout="wide")
 
-st.markdown("#Home")
-st.sidebar.markdown("Home")
+
+st.markdown("#Route Planning")
+st.sidebar.markdown("Route Planning")
 
 def home():
     st.markdown("#Home")
@@ -16,6 +18,3 @@ def page2():
 def page3():
     st.markdown("#Route Planning")
     st.sidebar.markdown("#Route Planning")
-
-
-
