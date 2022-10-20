@@ -28,7 +28,7 @@ def page3():
 
 st.header('Welcome to the Trafic page !')
 df = pd.read_csv('clean_taxi.csv')
-df2 = pd.read_csv('Data_China_7k.csv')
+df2 = pd.read_csv('Data_China_71k.csv')
 
 
 # ------------------------------------------------ FUNCTIONS ------------------------------------------------ #
