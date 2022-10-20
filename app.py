@@ -39,7 +39,7 @@ def print_efrei():
     l_col1, r_col1 = st.columns(2)
     with l_col1:
         image1 = Image.open('pictures/efrei.png')
-        st.image(image1, width=400, caption='EFREI Paris')
+        st.image(image1, width=300, caption='EFREI Paris')
     with r_col1:
         st.markdown('As part of our engineering studies at Efrei Paris and our Data Camp, we had to imagine, study and design an application in the cloud to meet the following 3 criteria:')
         st.markdown('- display the most congested streets')
