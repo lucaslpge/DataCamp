@@ -52,3 +52,4 @@ with r_col1:
     image2 = Image.open('pictures/lucas.jpg')
     st.image(image2, width=350, caption='Lucas Le Page')
 
+st.text('test')
