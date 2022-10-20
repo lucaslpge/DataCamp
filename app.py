@@ -30,7 +30,7 @@ def print_introduction():
     st.title("Welcome on our website !")
     l_col, r_col = st.columns(2)
     with l_col:
-        st.subheader("Traffic can be very heavy in a city like Beijing with a population of nearly 22 millions and nearly 70,000 taxis operating 24/7. ")
+        st.markdown("Traffic can be very heavy in a city like Beijing with a population of nearly 22 millions and nearly 70,000 taxis operating 24/7. ")
     with r_col:
         image_taxi_pekin = Image.open('pictures/taxi_pekin.jpg')
         st.image(image_taxi_pekin, width=500)
@@ -41,10 +41,10 @@ def print_efrei():
         image1 = Image.open('pictures/efrei.png')
         st.image(image1, width=400, caption='EFREI Paris')
     with r_col1:
-        st.subheader('As part of our engineering studies at Efrei Paris and our Data Camp, we had to imagine, study and design an application in the cloud to meet the following 3 criteria:')
-        st.subheader('- display the most congested streets')
-        st.subheader('- the average time to go from point A to point B')
-        st.subheader('- a global view of Beijing traffic')
+        st.markdown('As part of our engineering studies at Efrei Paris and our Data Camp, we had to imagine, study and design an application in the cloud to meet the following 3 criteria:')
+        st.markdown('- display the most congested streets')
+        st.markdown('- the average time to go from point A to point B')
+        st.markdown('- a global view of Beijing traffic')
 
 def print_team():
     st.subheader('Meet the team !')
