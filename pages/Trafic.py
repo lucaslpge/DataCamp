@@ -26,7 +26,7 @@ def page3():
 # ------------------------------------------------ LOADING CSV ------------------------------------------------ #
 
 
-st.header('Welcome to the Trafic page !')
+st.header('Welcome to the trafic page !')
 df = pd.read_csv('clean_taxi.csv')
 df2 = pd.read_csv('Data_China_71k.csv')
 
@@ -39,7 +39,7 @@ def map(df):
     left_col, right_col = st.columns(2)
     with left_col:
         st.subheader("Just say us what day and what time you want to check the trafic :")
-        day_to_filter = st.slider('Day', 2, 8, 2)
+        day_to_filter = st.slider('Day', 2, 8, 4)
         hour_to_filter = st.slider('Hour', 0, 23, 15)
         start_minute, end_minute = st.select_slider(
             'Minute',
