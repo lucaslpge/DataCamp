@@ -27,8 +27,8 @@ def page3():
 
 
 st.header('Welcome to the trafic page !')
-df = pd.read_csv('C:\\Users\\lucas\\PycharmProjects\\datacamp\\project_contents\\app\\clean_taxi.csv')
-df2 = pd.read_csv('C:\\Users\\lucas\\PycharmProjects\\datacamp\\project_contents\\app\\Data_China_71k.csv')
+df = pd.read_csv('clean_taxi.csv')
+df2 = pd.read_csv('Data_China_71k.csv')
 
 
 # ------------------------------------------------ FUNCTIONS ------------------------------------------------ #
