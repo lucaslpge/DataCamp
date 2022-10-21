@@ -32,13 +32,13 @@ def print_introduction():
     with l_col:
         st.markdown("Traffic can be very heavy in a city like Beijing with a population of nearly 22 millions and nearly 70,000 taxis operating 24/7. ")
     with r_col:
-        image_taxi_pekin = Image.open('pictures/taxi_pekin.jpg')
+        image_taxi_pekin = Image.open('C:/Users/lucas/PycharmProjects/datacamp/project_contents/app/pictures/taxi_pekin.jpg')
         st.image(image_taxi_pekin, width=500)
 
 def print_efrei():
     l_col1, r_col1 = st.columns(2)
     with l_col1:
-        image1 = Image.open('pictures/efrei.png')
+        image1 = Image.open('C:\\Users\\lucas\\PycharmProjects\\datacamp\\project_contents\\app\\pictures\\efrei.png')
         st.image(image1, width=300, caption='EFREI Paris')
     with r_col1:
         st.markdown('As part of our engineering studies at Efrei Paris and our Data Camp, we had to imagine, study and design an application in the cloud to meet the following 3 criteria:')
@@ -50,10 +50,10 @@ def print_team():
     st.subheader('Meet the team !')
     l_col1, r_col1 = st.columns(2)
     with l_col1:
-        image1 = Image.open('pictures/anto.jpg')
+        image1 = Image.open('C:\\Users\\lucas\\PycharmProjects\\datacamp\\project_contents\\app\\pictures\\anto.jpg')
         st.image(image1, width=350, caption='Antonin Guillocheau')
     with r_col1:
-        image2 = Image.open('pictures/lucas.jpg')
+        image2 = Image.open('C:\\Users\\lucas\\PycharmProjects\\datacamp\\project_contents\\app\\pictures\\lucas.jpg')
         st.image(image2, width=350, caption='Lucas Le Page')
 
 
