@@ -46,10 +46,10 @@ def print_team():
     l_col1, r_col1 = st.columns(2)
     with l_col1:
         image1 = Image.open('pictures/anto.jpg')
-        st.image(image1, width=350, caption='Antonin Guillocheau')
+        st.image(image1, width=250, caption='Antonin Guillocheau')
     with r_col1:
         image2 = Image.open('pictures/lucas.jpg')
-        st.image(image2, width=350, caption='Lucas Le Page')
+        st.image(image2, width=250, caption='Lucas Le Page')
 
 
 # ------------------------------------------------ MAIN ------------------------------------------------ #
