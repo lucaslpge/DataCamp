@@ -27,15 +27,15 @@ def page3():
     st.sidebar.markdown("#Route Planning")
 
 
-input1 = 0.0  # source's lattitude
+'''input1 = 0.0  # source's lattitude
 input2 = 0.0  # source's longitude
 input3 = 0.0  # destination's lattitude
-input4 = 0.0  # destination's longitude
+input4 = 0.0  # destination's longitude'''
 
-'''input1 = 39.88493  # source's lattitude
+input1 = 39.88493  # source's lattitude
 input2 = 116.3924  # source's longitude
 input3 = 39.8787  # destination's lattitude
-input4 = 116.39228  # destination's longitude'''
+input4 = 116.39228  # destination's longitude
 
 
 colors = ['blue', 'orange', 'green', 'yellow', 'purple']
@@ -51,9 +51,9 @@ Enter the coordinate of the Source
 # Activated two columns for input of lattitude and longitude of source
 col1, col2 = st.columns(2)
 with col1:
-    input1
+    input1 = st.number_input('Source Lattitude Coordinates')
 with col2:
-    input2
+    input2 = st.number_input('Source Longitude Coordinates')
 
 # Display the stored values of input by the user to double-check the given inputs
 st.write("Lattitude:", input1, "Longitude:", input2)
@@ -66,9 +66,9 @@ Enter the coordinate of the Destination
 # Activated two columns for input of lattitude and longitude of destination
 col1, col2 = st.columns(2)
 with col1:
-    input3
+    input3 = st.number_input('Destination Lattitude Coordinates')
 with col2:
-    input4
+    input4 = st.number_input('Destination Longitude Coordinates')
 
 # Display the stored values of input by the user to double-check the given inputs
 st.write("Lattitude:", input3, "Longitude:", input4)
