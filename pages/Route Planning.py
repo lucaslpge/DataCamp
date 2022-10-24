@@ -50,10 +50,10 @@ Enter the coordinate of the Source
 
 # Activated two columns for input of lattitude and longitude of source
 col1, col2 = st.columns(2)
-with col1:
+'''with col1:
     input1 = st.number_input('Source Lattitude Coordinates')
 with col2:
-    input2 = st.number_input('Source Longitude Coordinates')
+    input2 = st.number_input('Source Longitude Coordinates')'''
 
 # Display the stored values of input by the user to double-check the given inputs
 st.write("Lattitude:", input1, "Longitude:", input2)
@@ -65,10 +65,10 @@ Enter the coordinate of the Destination
 
 # Activated two columns for input of lattitude and longitude of destination
 col1, col2 = st.columns(2)
-with col1:
+'''with col1:
     input3 = st.number_input('Destination Lattitude Coordinates')
 with col2:
-    input4 = st.number_input('Destination Longitude Coordinates')
+    input4 = st.number_input('Destination Longitude Coordinates')'''
 
 # Display the stored values of input by the user to double-check the given inputs
 st.write("Lattitude:", input3, "Longitude:", input4)
