@@ -92,7 +92,6 @@ if st.button('Show me the Way'):
 
     tooltip2 = "Destination"
     folium.Marker(
-        [input3, input4], popup="Destination", tooltip=tooltip2, icon=folium.Icon(color='red')).add_to(
-        route_map)
+        [input3, input4], popup="Destination", tooltip=tooltip2, icon=folium.Icon(color='red')).add_to(route_map)
 
     folium_static(route_map)
