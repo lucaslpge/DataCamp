@@ -58,8 +58,7 @@ def street(df2):
     with right_col_street :
         def count_rows(rows):
             return len(rows)
-        by_taxi = df2.groupby('Street').apply(count_rows)
-        by_taxi
+        st.write(df2['Street'].value_counts().head(10))
 
 
 # ------------------------------------------------ MAIN FUNCTION ------------------------------------------------ #
